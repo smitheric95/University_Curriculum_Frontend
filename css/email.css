@@ -1,0 +1,31 @@
+/* Email Success Page */
+
+body{
+	background-color: #f9f9f9;
+}
+#successWrapper{
+    background-color: #FFF;
+    padding: 10px 0px 20px 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 100px auto;
+    width: 350px;
+    position: relative;
+}
+
+#successWrapper > a.redCircle{
+    width:68px;
+	text-align: center;
+	position: absolute;
+	top: -33px;
+	right: 20px;
+}
+#successWrapper > a.redCircle > i{
+	margin: 0 auto; 
+} 
+
+h2{
+	color: #364E9F;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://192.168.33.10/ -->
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>SMU UC</title>
+<link href="http://192.168.33.10/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="./css/main.css" rel="stylesheet" type="text/css">
+<link href="./css/email.css" rel="stylesheet" type="text/css"><!-- Google Material -->
+<link href="./css/icon" rel="stylesheet">
+<link href="./css/css" rel="stylesheet" type="text/css">
+<link href="./css/css(1)" rel="stylesheet" type="text/css">
+<script src="./js/jquery-1.9.1.js">
+</script><!-- global variables -->
+
+<script>
+       //the minimum size to switch to mobile functionality
+       //note this must also be changed in main.css
+       var mobileWidth = 701;
+       var mobileNavGap = 85;
+</script><!-- onepage-scroll plugin -->
+
+<script src="./js/jquery.onepage-scroll.js">
+</script>
+<link href="./css/onepage-scroll.css" rel="stylesheet" type="text/css"><!-- multiple select plugin -->
+
+<script src="./js/jquery.multi-select.js">
+</script>
+<link href="./css/multi-select.css" rel="stylesheet" type="text/css">
+<script src="./js/jquery.quicksearch.js">
+</script><!-- enable plugins before DOM has loaded -->
+
+<script src="./js/ripple.js">
+</script>
+<script src="./js/magicLine.js">
+</script>
+<script src="./js/main.js">
+</script>
+<script src="./js/resize.js">
+</script>
+</head>
+<body>
+	<section class="intro searchMode orMode feedbackMode">
+		<div class="title-wrapper">
+			<h1>SMU <span>University<br>
+			Curriculum</span></h1>
+			<ul>
+				<li>
+					<a class="redCircle" id="orModeButton"><i class="material-icons md-48">view_list</i></a>
+					<div class="info-card">
+						<h3>Find Classes</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu blandit mi. Fusce iaculis turpis</p>
+					</div>
+				</li>
+				<li>
+					<a class="redCircle" id=""><i class="material-icons md-48">search</i></a>
+					<div class="info-card">
+						<h3>Course Lookup</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu blandit mi. Fusce iaculis turpis</p>
+					</div>
+				</li>
+				<li>
+					<a class="redCircle" id=""><i class="material-icons md-48 md-inactive">more_horiz</i></a>
+					<div class="info-card">
+						<h3>Leave Feedback</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu blandit mi. Fusce iaculis turpis</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<script>
+	   var UC_CATEGORIES = ["Start","Foundations","Pillars","Proficiencies and Experiences","Final"];
+	</script>
+	<form action="table.html" class="main-form" id="orModeWrapper" method="get" name="orModeWrapper" style="display: none;">
+		<section class="orMode">
+			<div class="select-wrapper">
+				<select class="multiple-select" multiple name="Foundations[]">
+					<option value="DISC">
+						DISC
+					</option>
+					<option value="KNOW">
+						KNOW
+					</option>
+					<option value="PRW1">
+						PRW1
+					</option>
+					<option value="PRW2">
+						PRW2
+					</option>
+					<option value="QF">
+						QF
+					</option>
+				</select>
+			</div>
+		</section>
+		<section class="orMode">
+			<div class="select-wrapper">
+				<select class="multiple-select" multiple name="Pillars[]">
+					<option value="CA1">
+						CA1
+					</option>
+					<option value="CA2">
+						CA2
+					</option>
+					<option value="HC1">
+						HC1
+					</option>
+					<option value="HC2">
+						HC2
+					</option>
+					<option value="IIC1">
+						IIC1
+					</option>
+					<option value="IIC2">
+						IIC2
+					</option>
+					<option value="PAS1">
+						PAS1
+					</option>
+					<option value="PAS2">
+						PAS2
+					</option>
+					<option value="PRIE1">
+						PRIE1
+					</option>
+					<option value="PRIE2">
+						PRIE2
+					</option>
+				</select>
+			</div>
+		</section>
+		<section class="orMode">
+			<div class="select-wrapper">
+				<select class="multiple-select" multiple name="Proficiencies and Experiences[]">
+					<option value="SL">
+						SL
+					</option>
+					<option value="CE">
+						CE
+					</option>
+					<option value="GE">
+						GE
+					</option>
+					<option value="HD">
+						HD
+					</option>
+					<option value="IL">
+						IL
+					</option>
+					<option value="OC">
+						OC
+					</option>
+					<option value="QR">
+						QR
+					</option>
+					<option value="WRIT">
+						WRIT
+					</option>
+				</select>
+			</div>
+		</section>
+		<section class="finish orMode">
+			<select id="optgroup" multiple="multiple">
+				<optgroup label="Foundations">
+					<option disabled>
+					</option>
+				</optgroup>
+				<optgroup label="Pillars">
+					<option disabled>
+					</option>
+				</optgroup>
+				<optgroup label="Proficiencies and Experiences">
+					<option disabled>
+					</option>
+				</optgroup>
+			</select>
+		</section>
+	</form>
+	<script>
+	   var UC_COURSES = {"ACCT":["5314"],"ADV":["2374","2375","3385","4125","4225","4317","4325","4354","4385"],"AMAE":["3305","3370","3387","4375"],"ANTH":["1321","2301","2302","2315","2363","2380","3301","3303","3310","3311","3312","3313","3314","3315","3316","3317","3318","3323","3328","3329","3334","3336","3346","3348","3350","3351","3353","3354","3355","3358","3359","3366","3374","3376","3384","3399","4307","4336"],"APSM":["2441","3311","3372","3411","4307","4412","5300","5610"],"ARBC":["1401","1402","2301","2302","3301","3302"],"ARHS":["1303","1304","1306","1308","1338","1340","1350","1351","3310","3320","3324","3333","3344","3355","3361","3362","3365","3367","3368","3369","3382","3383","3384","3385","4304","4310","4320","4321","4322","4330","4331","4344","4349","4350","4351","4352","4362","4380","4399"],"ASAG":["3325","3350"],"ASCE":["1300","3320"],"ASDR":["1300","1310","3300","5303"],"ASIM":["3315","3370"],"ASPH":["1300","3304"],"ASPR":["1300"],"ASPT":["1300"],"ASSC":["1300"],"BA":["4111"],"BIOL":["1303","1305","1308","1310","1401","1402","3305","3306","4306","4325","4331","4360","4460","5110","5304","5312"],"BL":["3335"],"BLI":["3302"],"BUSE":["3300"],"CEE":["1301","1302","1331","2372","3302","4381"],"CF":["3302","3306","3308","3309","3312","3313","3314","3317","3319","3320","3323","3325","3328","3330","3332","3333","3334","3335","3338","3342","3343","3345","3349","3350","3356","3361","3362","3364","3366","3367","3368","3374","3378","3379","3387","3388","3389","3395","3397","3401","3404"],"CFA":["3302","3303","3304","3310","3312","3313","3316","3319","3320","3324","3325","3327","3330","3334","3336","3337","3339","3344","3345","3346","3350","3353","3359","3362","3368","3369","3370","3372","3374","3375","3377","3379","3381","3384","3385","3388","3390","3393","3394","3395"],"CFB":["3301","3302","3304","3306","3309","3310","3312","3313","3314","3318","3322","3333","3336","3341","3342","3347","3348","3350","3351","3355","3361","3362","3371","3375","3381","3382","3383","3391"],"CHEM":["1113","1114","1301","1303","1304","4397","5110","5192","5312"],"CHIN":["1401","1402","2401","2402","3311","3312","4382"],"CISB":["5397"],"CLAS":["3312"],"COMM":["2300","2308","2310","2375","3300","3321","3382","4310","4323","4390"],"CSE":["1341","2353","3381","4351","4352","5391"],"DANC":["1303","1304","1305","1306","2160","2361","3341","3363","4373","4374"],"DISC":["1311","1312","1313","1315","2305","2306"],"ECO":["1311","3301"],"EDU":["4300","5121","5122","5123","5124","5125","5126","5348","5357"],"EE":["1301","2381","3311","3360","3381","4311","4352","5391"],"EMIS":["1305","3308","3375","4395"],"ENGL":["1320","1330","1360","1363","1365","1380","1385","1400","2302","2306","2310","2311","2312","2313","2314","2315","2322","2361","2390","3320","3330","3331","3332","3335","3340","3341","3344","3345","3346","3347","3350","3354","3355","3360","3362","3363","3366","3367","3369","3373","3375","3376","3377","3379","3384","3390","4310","4320","4321","4323","4330","4331","4332","4333","4336","4339","4340","4341","4343","4345","4346","4349","4350","4351","4356","4360","4369","4370"],"ENGR":["1099","1199","2099","3099","4099","5099","5390","5391","6099"],"ETST":["2301"],"FILM":["1301","1302","1304","2332","2344","2351","2362","3300","3304","3310","3352","3353","3355","3375","4304","4325","4399"],"FINA":["4326"],"FREN":["1401","1402","1502","1601","2401","2455","3356","4370","4372","4375","4376","4381","4391","5325","5369"],"GEOL":["1301","1305","1307","1308","1313","1315","3359","3374","3380"],"GERM":["1401","1402","2311","2312","3325","3330","4310","4320","4330","4350"],"HDEV":["1110","1111","2201","2308"],"HIN":["1402"],"HIST":["1312","1321","1322","1323","2311","2312","2323","2337","2352","2355","2366","2379","2380","2384","2390","2391","2392","2394","2395","3301","3303","3304","3306","3307","3308","3309","3310","3312","3313","3314","3315","3316","3319","3323","3324","3327","3328","3329","3332","3334","3335","3339","3340","3341","3347","3355","3358","3359","3361","3362","3363","3364","3365","3366","3369","3370","3374","3376","3377","3379","3380","3381","3382","3384","3386","3388","3389","3390","3395","4300","4388","5380"],"HRTS":["3301","3320","3329","3341","3348","3377"],"ITAL":["1401","1402","2401","2402","3355","3373","4324","4368"],"JAPN":["1401","1402","2401","2402"],"JOUR":["2302","2312","2313","3345","3362","3396","4306","4350","4360","4398"],"KNW":["2000","2300","2301","2302","2303","2304","2305","2306","2310","2311","2315","2333","2367","2399"],"LATN":["1401","1402","2311","2312","3326","3327"],"MATH":["1307","1309","1337","2343"],"ME":["1301","1304","1305","2372","3340","3390","4380","4381","5391"],"MKTG":["3342"],"MNO":["3370","3371","3373","3375","4371","4372"],"MSA":["3369","3391"],"MUAS":["1323"],"MUED":["3330","3332"],"MUHI":["1302","1321","3301","3302","3339","3340","4302","4345","4355","4356"],"MUTH":["1301","4310","5325"],"MUTY":["4141","4142","4145","4340","4341","5341"],"PERB":["2313"],"PHIL":["1300","1301","1305","1306","1316","1317","1318","3161","3301","3302","3310","3312","3313","3314","3315","3316","3317","3318","3320","3351","3352","3362","3363","3364","3371","3372","3373","3374","3375","3376","3377","3379","3380","3383"],"PHYS":["1105","1106","1301","1303","1304","1307","1308","1311","1313","1314","1320","3305","3333","3368","4211","5380"],"PLSC":["1320","1340","1360","1380","3321","3325","3327","3330","3335","3342","3347","3349","3358","3359","3360","3361","3362","3381","3389","4320","4321","4331","4333","4335","4337","4338","4340","4341","4342","4344","4356","4363","4369","4384"],"PPIA":["2380","3301","3302"],"PRW":["1101","1199","2100","2199"],"PRW1":["1101"],"PRW2":["2101","2102","2105","2106","2110","2112","2114","2115","2117","2120","2125","2127","2130","2132","2135","2140","2190"],"PSYC":["1300","2301","2351","3291","3332","3335","3341","3360","3365","3370","3371","3375","4320","4342","4376","4380","4381","4393"],"RELI":["1301","1303","1304","1305","1308","1311","3302","3304","3306","3307","3309","3310","3319","3321","3326","3329","3330","3337","3341","3342","3343","3348","3353","3360","3366","3375","3378","3380","3381","3382","3383","3390"],"RUSS":["1401","1402","2341","2351"],"SOCI":["1300","2300","2310","3301","3305","3311","3312","3320","3321","3340","3345","3371","3372","3377","4384","4385"],"SPAN":["1401","1402","1502","2302","2311","2312","2401","3310","3311","3312","3313","3355","3358","3373","3374","3375","4185","4285","4357","4358","4385","4391","4395","5310","5341","5375"],"STAT":["1301","2301","2331","4385"],"STRA":["5370"],"THEA":["1303","2304","2311","3381","3382","4381","4385"],"UHP":["2100"],"WELL":["2170"],"WGST":["2322","3380"],"WL":["2395","3308","3309","3323","3330","3341","3351","3355","3362","3393","3394","3397","3398"]};
+	</script>
+	<div class="searchDiv">
+		<section class="searchMode" id="searchModeWrapper" style="display: none;">
+			<div class="select-wrapper">
+				<form>
+					<select id="departmentInput">
+						<option value="ACCT">
+							ACCT
+						</option>
+						<option value="ADV">
+							ADV
+						</option>
+						<option value="AMAE">
+							AMAE
+						</option>
+						<option value="ANTH">
+							ANTH
+						</option>
+						<option value="APSM">
+							APSM
+						</option>
+						<option value="ARBC">
+							ARBC
+						</option>
+						<option value="ARHS">
+							ARHS
+						</option>
+						<option value="ASAG">
+							ASAG
+						</option>
+						<option value="ASCE">
+							ASCE
+						</option>
+						<option value="ASDR">
+							ASDR
+						</option>
+						<option value="ASIM">
+							ASIM
+						</option>
+						<option value="ASPH">
+							ASPH
+						</option>
+						<option value="ASPR">
+							ASPR
+						</option>
+						<option value="ASPT">
+							ASPT
+						</option>
+						<option value="ASSC">
+							ASSC
+						</option>
+						<option value="BA">
+							BA
+						</option>
+						<option value="BIOL">
+							BIOL
+						</option>
+						<option value="BL">
+							BL
+						</option>
+						<option value="BLI">
+							BLI
+						</option>
+						<option value="BUSE">
+							BUSE
+						</option>
+						<option value="CEE">
+							CEE
+						</option>
+						<option value="CF">
+							CF
+						</option>
+						<option value="CFA">
+							CFA
+						</option>
+						<option value="CFB">
+							CFB
+						</option>
+						<option value="CHEM">
+							CHEM
+						</option>
+						<option value="CHIN">
+							CHIN
+						</option>
+						<option value="CISB">
+							CISB
+						</option>
+						<option value="CLAS">
+							CLAS
+						</option>
+						<option value="COMM">
+							COMM
+						</option>
+						<option value="CSE">
+							CSE
+						</option>
+						<option value="DANC">
+							DANC
+						</option>
+						<option value="DISC">
+							DISC
+						</option>
+						<option value="ECO">
+							ECO
+						</option>
+						<option value="EDU">
+							EDU
+						</option>
+						<option value="EE">
+							EE
+						</option>
+						<option value="EMIS">
+							EMIS
+						</option>
+						<option value="ENGL">
+							ENGL
+						</option>
+						<option value="ENGR">
+							ENGR
+						</option>
+						<option value="ETST">
+							ETST
+						</option>
+						<option value="FILM">
+							FILM
+						</option>
+						<option value="FINA">
+							FINA
+						</option>
+						<option value="FREN">
+							FREN
+						</option>
+						<option value="GEOL">
+							GEOL
+						</option>
+						<option value="GERM">
+							GERM
+						</option>
+						<option value="HDEV">
+							HDEV
+						</option>
+						<option value="HIN">
+							HIN
+						</option>
+						<option value="HIST">
+							HIST
+						</option>
+						<option value="HRTS">
+							HRTS
+						</option>
+						<option value="ITAL">
+							ITAL
+						</option>
+						<option value="JAPN">
+							JAPN
+						</option>
+						<option value="JOUR">
+							JOUR
+						</option>
+						<option value="KNW">
+							KNW
+						</option>
+						<option value="LATN">
+							LATN
+						</option>
+						<option value="MATH">
+							MATH
+						</option>
+						<option value="ME">
+							ME
+						</option>
+						<option value="MKTG">
+							MKTG
+						</option>
+						<option value="MNO">
+							MNO
+						</option>
+						<option value="MSA">
+							MSA
+						</option>
+						<option value="MUAS">
+							MUAS
+						</option>
+						<option value="MUED">
+							MUED
+						</option>
+						<option value="MUHI">
+							MUHI
+						</option>
+						<option value="MUTH">
+							MUTH
+						</option>
+						<option value="MUTY">
+							MUTY
+						</option>
+						<option value="PERB">
+							PERB
+						</option>
+						<option value="PHIL">
+							PHIL
+						</option>
+						<option value="PHYS">
+							PHYS
+						</option>
+						<option value="PLSC">
+							PLSC
+						</option>
+						<option value="PPIA">
+							PPIA
+						</option>
+						<option value="PRW">
+							PRW
+						</option>
+						<option value="PRW1">
+							PRW1
+						</option>
+						<option value="PRW2">
+							PRW2
+						</option>
+						<option value="PSYC">
+							PSYC
+						</option>
+						<option value="RELI">
+							RELI
+						</option>
+						<option value="RUSS">
+							RUSS
+						</option>
+						<option value="SOCI">
+							SOCI
+						</option>
+						<option value="SPAN">
+							SPAN
+						</option>
+						<option value="STAT">
+							STAT
+						</option>
+						<option value="STRA">
+							STRA
+						</option>
+						<option value="THEA">
+							THEA
+						</option>
+						<option value="UHP">
+							UHP
+						</option>
+						<option value="WELL">
+							WELL
+						</option>
+						<option value="WGST">
+							WGST
+						</option>
+						<option value="WL">
+							WL
+						</option>
+					</select> <select id="classNumberInput">
+						<option value="5314">
+							5314
+						</option>
+					</select><br>
+					UC Components Satisfied:
+					<table id="componentTable">
+						<tbody>
+							<tr>
+								<td class="componentAbbv">IL</td>
+								<td class="componentTitle">IL</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</section>
+	</div>
+	<div class="feedbackDiv">
+		<section class="feedbackMode" id="feedbackModeWrapper" style="display: none;">
+			<div class="select-wrapper">
+				<h1>This is the feedback page...</h1>
+			</div>
+		</section>
+	</div>
+	<footer></footer>
+</body>
+</html>
